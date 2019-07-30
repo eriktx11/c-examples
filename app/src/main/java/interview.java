@@ -1,12 +1,34 @@
-class interview{
-    public static void main (String[] args){
-        int bucky[] = new int[3];
+//string/array, manipulation, tree, hashmap
 
-        bucky [0]= 323;
-        bucky [1]= 33;
-        bucky [2]= 123;
+class Node{
+    int data;
+    Node left;
+    Node right;
+}
 
-        System.out.println(bucky[2]);
+class BST{
+    public Node createNewNode(int k){
+        Node a = new Node();
+        a.data = k;
+        a.left = null;
+        a.right = null;
+        return a;
     }
+    public Node insert(Node node, int val){
+        if(node == null){
+            return createNewNode(val);
+        }
+
+        return node;
+    }
+}
+
+public class interview{
+  public static void main(String[] args){
+      BST a = new BST();
+      Node root = null;
+      //8, 3, 6, 10, 4, 7,1,14,13
+      root = a.insert(root, 9);
+  }
 
 }
