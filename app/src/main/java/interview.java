@@ -18,6 +18,11 @@ class BST{
         if(node == null){
             return createNewNode(val);
         }
+        if(val<=node.data){
+            node.left = insert(node.left, val);
+        } else if (val > node.data){
+            node.right = insert(node.right, val);
+        }
 
         return node;
     }
@@ -29,6 +34,10 @@ public class interview{
       Node root = null;
       //8, 3, 6, 10, 4, 7,1,14,13
       root = a.insert(root, 9);
+      root = a.insert(root, 3);
+      root = a.insert(root, 6);
+      root = a.insert(root, 10);
+      root = a.insert(root, 4);
   }
 
 }
